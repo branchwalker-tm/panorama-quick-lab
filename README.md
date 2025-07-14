@@ -13,5 +13,10 @@ A simple Terraform script to quickly create a lab environment that contains a Pa
 
 Add your preferrred AWS region, your key pair name, and a project name in the `variables.tf` file. Then run `terraform plan` and `terraform apply` in your working directory.
 
-Once the environment has been created your will need to register your Palo Alto Networks devices, add the VM-series firewall as a managed device in Panorama, and configure the VM-series to your heart's conent. ***IMPORTANT*** You'll need to configure a tunnel on your local machine and access the VM-series GUI by navigating to `https://localhost:8443`. You can configure the tunnel by running:
+Once the environment has been created your will need to register your Palo Alto Networks devices, add the VM-series firewall as a managed device in Panorama, and configure the VM-series to your heart's content.
+
+***IMPORTANT*** 
+
+You'll need to configure a tunnel on your local machine and access the VM-series GUI by navigating to `https://localhost:8443`. You can configure the tunnel by running:
+
 `ssh -i ~/.ssh/my-lab-key.pem -L 8443:<VM_Series_Management_Private_IP>:443 ubuntu@<Bastion_Public_IP>` 
